@@ -1,41 +1,21 @@
 {% from "_includes/forms" import textField, lightswitchField, autosuggestField %}
 
 {{ autosuggestField({
-    label: 'API Username'|t('commerce'),
-    instructions: "Your PayPal API username."|t('commerce'),
-    id: 'user',
+    label: 'E-mail'|t('commerce'),
+    id: 'email',
     class: 'ltr',
-    name: 'user',
+    name: 'email',
+    value: gateway.email,
     suggestEnvVars: true,
-    value: gateway.user,
-    errors: gateway.getErrors('user')
+    errors: gateway.getErrors('email')
 }) }}
 
 {{ autosuggestField({
-    label: "API Password"|t('commerce'),
-    instructions: "Your PayPal API password."|t('commerce'),
+    label: "Password"|t('commerce'),
     id: 'password',
     class: 'ltr',
     name: 'password',
-    suggestEnvVars: true,
     value: gateway.password,
+    suggestEnvVars: true,
     errors: gateway.getErrors('password')
 }) }}
-
-{{ autosuggestField({
-    label: "API Signature"|t('commerce'),
-    instructions: "Your PayPal API signature."|t('commerce'),
-    id: 'signature',
-    class: 'ltr',
-    name: 'signature',
-    suggestEnvVars: true,
-    value: gateway.signature,
-    errors: gateway.getErrors('signature')
-}) }}
-
- {{ lightswitchField({
-     label: "Test mode?"|t('commerce'),
-     name: 'testMode',
-     on: gateway.testMode,
-     errors: gateway.getErrors('testMode'),
- }) }}

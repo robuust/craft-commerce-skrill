@@ -28,7 +28,7 @@
         "craftcms/cms": "^3.1.5",
         "craftcms/commerce": "^2.0|^3.0",
         "craftcms/commerce-omnipay": "^2.0.0",
-        "samyan/omnipay-skrill": "^1.0.0"
+        "samyan/omnipay-skrill": "^1.0.1"
     },
     "autoload": {
         "psr-4": {
