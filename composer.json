@@ -1,0 +1,42 @@
+{
+    "name": "robuust/craft-commerce-skrill",
+    "description": "Skrill integration for Craft Commerce 2 & 3",
+    "version": "1.0.0",
+    "type": "craft-plugin",
+    "keywords": [
+        "skrill",
+        "commerce",
+        "craftcms",
+        "omnipay",
+        "yii2"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robuust",
+            "homepage": "https://robuust.digital/"
+        }
+    ],
+    "support": {
+        "email": "support@robuust.digital",
+        "issues": "https://github.com/robuust/craft-commerce-skrill/issues?state=open",
+        "source": "https://github.com/robuust/craft-commerce-skrill",
+        "docs": "https://github.com/robuust/craft-commerce-skrill",
+        "rss": "https://github.com/robuust/craft-commerce-skrill/commits/master.atom"
+    },
+    "require": {
+        "craftcms/cms": "^3.1.5",
+        "craftcms/commerce": "^2.0|^3.0",
+        "craftcms/commerce-omnipay": "^2.0.0",
+        "samyan/omnipay-skrill": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "robuust\\skrill\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Skrill for Craft Commerce",
+        "handle": "commerce-skrill"
+    }
+}
