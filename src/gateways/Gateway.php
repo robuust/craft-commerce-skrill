@@ -5,6 +5,7 @@ namespace robuust\skrill\gateways;
 use Craft;
 use craft\commerce\models\payments\BasePaymentForm;
 use craft\commerce\omnipay\base\OffsiteGateway;
+use craft\helpers\App;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Skrill\Gateway as OmnipayGateway;
 
@@ -65,6 +66,7 @@ class Gateway extends OffsiteGateway
         $request['details'] = [
             'description' => $request['description'],
         ];
+        $request['notifyUrl2'] = App::mailSettings()->fromEmail;
     }
 
     /**
