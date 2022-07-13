@@ -72,7 +72,7 @@ class Gateway extends OffsiteGateway
     /**
      * {@inheritdoc}
      */
-    public function rules()
+    public function rules(): array
     {
         $rules = parent::rules();
         $rules[] = ['paymentType', 'compare', 'compareValue' => 'purchase'];
@@ -91,8 +91,8 @@ class Gateway extends OffsiteGateway
         /** @var OmnipayGateway $gateway */
         $gateway = static::createOmnipayGateway($this->getGatewayClassName());
 
-        $gateway->setEmail(Craft::parseEnv($this->email));
-        $gateway->setPassword(Craft::parseEnv($this->password));
+        $gateway->setEmail(App::parseEnv($this->email));
+        $gateway->setPassword(App::parseEnv($this->password));
 
         return $gateway;
     }
