@@ -4,7 +4,7 @@ This plugin provides [Skrill](https://www.skrill.com/) integrations for [Craft C
 
 ## Requirements
 
-This plugin requires Craft 3.6 and Craft Commerce 3.3 or later.
+This plugin requires Craft 4.0 and Craft Commerce 4.0 or later.
 
 ## Installation
 
@@ -33,4 +33,4 @@ composer require robuust/craft-commerce-skrill
 
 To add a Skrill payment gateway, go to Commerce → Settings → Gateways, create a new gateway, and set the gateway type to Skrill”.
 
-> **Tip:** The API Key and Locale settings can be set to environment variables. See [Environmental Configuration](https://docs.craftcms.com/v3/config/environments.html) in the Craft docs to learn more about that.
+> **Tip:** The E-mail and Password settings can be set to environment variables. See [Environmental Configuration](https://docs.craftcms.com/v3/config/environments.html) in the Craft docs to learn more about that.

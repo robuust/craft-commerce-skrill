@@ -51,7 +51,7 @@ class Gateway extends OffsiteGateway
     /**
      * {@inheritdoc}
      */
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate('commerce-skrill/gatewaySettings', ['gateway' => $this]);
     }
@@ -59,7 +59,7 @@ class Gateway extends OffsiteGateway
     /**
      * {@inheritdoc}
      */
-    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
+    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null): void
     {
         parent::populateRequest($request, $paymentForm);
         $request['language'] = $request['order']->orderLanguage;
@@ -100,7 +100,7 @@ class Gateway extends OffsiteGateway
     /**
      * {@inheritdoc}
      */
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): ?string
     {
         return '\\'.OmnipayGateway::class;
     }
